@@ -1,0 +1,42 @@
+ext {
+
+    // 测试环境  /  正式环境  （组件化环境  /  集成化环境）
+    isRelease = true;
+
+    // 定义一个包名，用于存放APT生成的所有类文件
+    packageNameForAPT = "com.ckming.arouter";
+
+    app_android = [
+            compileSdkVersion        : 29,
+            buildToolsVersion        : "29.0.3",
+            applicationId            : "com.ckming.arouter",
+            minSdkVersion            : 15,
+            targetSdkVersion         : 29,
+            versionCode              : 1,
+            versionName              : "1.0",
+            testInstrumentationRunner: "androidx.test.runner.AndroidJUnitRunner"
+    ]
+
+    // order，personal，自己的包名
+    app_appid = [
+            "order"   : "com.ckming.order",
+            "personal": "com.ckming.personal"
+    ]
+
+    // 测试环境的服务器地址，和，正式环境服务器地址
+    url = [
+            "debug"  : "https://11.22.33.44/debug",
+            "release": "https://55.66.77.88/release"
+    ]
+
+    // 定义依赖项，体现真实开发项目的过程
+    app_dependencies = [
+            "appcompat" : 'androidx.appcompat:appcompat:1.1.0',
+            "constraint": 'androidx.constraintlayout:constraintlayout:1.1.3',
+            "okhttp3"   : "com.squareup.okhttp3:okhttp:3.10.0",
+            "retrofit"  : "com.squareup.retrofit2:retrofit:2.5.0",
+            "fastjson"  : "com.alibaba:fastjson:1.2.58",
+    ]
+    // ...
+
+}

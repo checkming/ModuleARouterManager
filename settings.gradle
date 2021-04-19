@@ -1,2 +1,8 @@
+include ':arouter_compiler'
+include ':arouter_annotation'
+include ':personal'
+include ':order'
+include ':common'
+include ':arouter_api'
 include ':app'
 rootProject.name = "ModuleARouterManager"
