@@ -1,7 +1,7 @@
 package com.ckming.arouter.apt_create_test;
 
-import com.xiangxue.arouter_api.ARouterGroup;
-import com.xiangxue.arouter_api.ARouterPath;
+import com.ckming.arouter_api.ARouterGroup;
+import com.ckming.arouter_api.ARouterPath;
 
 import java.util.HashMap;
 import java.util.Map;

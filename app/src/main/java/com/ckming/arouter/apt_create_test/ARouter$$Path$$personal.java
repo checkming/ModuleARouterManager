@@ -3,6 +3,7 @@ package com.ckming.arouter.apt_create_test;
 
 import com.ckming.arouter_annotation.bean.RouterBean;
 import com.ckming.arouter_api.ARouterPath;
+import com.ckming.module_arouter.order.Order_MainActivity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,14 +18,8 @@ public class ARouter$$Path$$personal implements ARouterPath {
 
         pathMap.put("/personal/Personal_MainActivity",
                 RouterBean.create(RouterBean.TypeEnum.ACTIVITY,
-                                  Order_MainActivity.class,
-                           "/personal/Personal_MainActivity",
-                          "personal"));
-
-        pathMap.put("/personal/Order_Main2Activity",
-                RouterBean.create(RouterBean.TypeEnum.ACTIVITY,
-                        Personal_Main2Activity.class,
-                        "/personal/Personal_Main2Activity",
+                        Order_MainActivity.class,
+                        "/personal/Personal_MainActivity",
                         "personal"));
         return pathMap;
     }
