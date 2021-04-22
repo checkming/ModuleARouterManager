@@ -1,9 +1,9 @@
 package com.ckming.arouter.apt_create_test;
 
 
+import com.ckming.arouter.order.Order_MainActivity;
 import com.ckming.arouter_annotation.bean.RouterBean;
 import com.ckming.arouter_api.ARouterPath;
-import com.ckming.module_arouter.order.Order_MainActivity;
 
 import java.util.HashMap;
 import java.util.Map;

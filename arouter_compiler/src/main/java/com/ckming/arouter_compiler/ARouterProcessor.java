@@ -168,12 +168,12 @@ public class ARouterProcessor extends AbstractProcessor {
             //3.包
             JavaFile packageF = JavaFile.builder("com.ckming.arouter", helloWorld)
                     .build();
-            try {
+            /*try {
                 packageF.writeTo(filer);
             } catch (IOException e) {
                 e.printStackTrace();
                 message.printMessage(Diagnostic.Kind.NOTE, "生成失败，请检查代码");
-            }
+            }*/
 
             //-----------------------
 
@@ -256,14 +256,14 @@ public class ARouterProcessor extends AbstractProcessor {
         /**最终Group模版效果
          *
          public class ARouter$$Group$$order implements ARouterGroup {
-        @Override public Map<String, Class<? extends ARouterPath>> getGroupMap () {
-        Map<String, Class<? extends ARouterPath>> groupMap = new HashMap<>();
-        groupMap.put("order", ARouter$$Path$$order.class);       // 寻找Path
-        ...
+            @Override public Map<String, Class<? extends ARouterPath>> getGroupMap () {
+                Map<String, Class<? extends ARouterPath>> groupMap = new HashMap<>();
+                groupMap.put("order", ARouter$$Path$$order.class);       // 寻找Path
+                ...
 
-        return groupMap;
-        }
-        }
+                return groupMap;
+                }
+            }
          */
 
         //返回值  Map<String, Class<? extends ARouterPath>>
@@ -339,15 +339,15 @@ public class ARouterProcessor extends AbstractProcessor {
         /** 最终Path模版效果
          *
          public class ARouter$$Path$$order implements ARouterPath {
-        @Override public Map<String, RouterBean> getPathMap () {
-        Map<String, RouterBean> pathMap = new HashMap<>();
-        pathMap.put("/order/Order_MainActivity",
-        RouterBean.create(RouterBean.TypeEnum.ACTIVITY, Order_MainActivity.class,
-        "/order/Order_MainActivity","order" ));
-        ....
+            @Override public Map<String, RouterBean> getPathMap () {
+                Map<String, RouterBean> pathMap = new HashMap<>();
+                pathMap.put("/order/Order_MainActivity",
+                RouterBean.create(RouterBean.TypeEnum.ACTIVITY, Order_MainActivity.class,
+                "/order/Order_MainActivity","order" ));
+                ....
 
-        return pathMap;
-        }
+                return pathMap;
+            }
         }
          */
 
