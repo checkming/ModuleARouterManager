@@ -1,16 +1,12 @@
 package com.ckming.arouter;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
 import com.ckming.arouter_annotation.ARouter;
-import com.ckming.arouter_annotation.bean.RouterBean;
-import com.ckming.arouter_api.ARouterPath;
+import com.ckming.arouter_api.RouterManager;
 import com.ckming.common.utils.Cons;
-
-import java.util.Map;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -36,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param view
      */
-    public void jumpOrder(View view) {
+    public void jumpOrder(View view) throws IllegalAccessException {
 
         //以前的跳转方式，但在组件化模式中不行
         /*Intent intent = new Intent(this, Order_MainActivity.class);
@@ -45,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //注册模块路由地址后，去寻找自动生成的类
-        ARouter$$Group$$order group$$order = new ARouter$$Group$$order();
+        /*ARouter$$Group$$order group$$order = new ARouter$$Group$$order();
         Map<String, Class<? extends ARouterPath>> groupMap = group$$order.getGroupMap();
         Class<? extends ARouterPath> myClass = groupMap.get("order");
 
@@ -63,9 +59,13 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         } catch (InstantiationException e) {
             e.printStackTrace();
-        }
+        }*/
 
         //虽然实现了跨模块路由跳转，但还需封装
+        RouterManager.getInstance()
+                .build("/order/Order_MainActivity")
+                .withString("name", "高德地图")
+                .navigation(this);
     }
 
 
