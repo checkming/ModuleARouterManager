@@ -42,8 +42,10 @@ public interface ProcessorConfig {
     // 路由组，GROUP 最终要生成的 文件名
     String GROUP_FILE_NAME = "ARouter$$Group$$";
 
+    // TODO: 2021/4/25 注解：
+
     // @Parameter注解 的 包名 + 类名
-    String PARAMETER_PACKAGE = "com.xiangxue.arouter_annotation.Parameter";
+    String PARAMETER_PACKAGE = "com.ckming.arouter_annotation.Parameter";
 
     // ARouter api 的 ParameterGet 高层标准
     String AROUTER_AIP_PARAMETER_GET = AROUTER_API_PACKAGE + ".ParameterGet";
